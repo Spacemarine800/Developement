@@ -19,12 +19,12 @@ public class Scrap {
      */
     public static void main(String[] args) {
     	
-    	String host = "172.20.53.90";
-    	String username = "EBANKOFR";
-    	String password = "OFREBANK";
+    	String host = "";
+    	String username = "";
+    	String password = "";
     	
-    	String targetUserName = "f3516091";
-    	String defaultPassword = "P@ssword1";
+    	String targetUserName = "";
+    	String defaultPassword = "";
     	String status = "*ENABLED";
     	
     	boolean isSuccessful = false;
