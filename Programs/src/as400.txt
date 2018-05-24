@@ -1,0 +1,3 @@
+jdbc:as400://172.20.53.90/inbbnkbdb
+ebankofr
+ofrebank
