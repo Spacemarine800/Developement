@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 public class Deadlock {
+
+//	Output
+//	Fox: Wolf has bitten me!
+//	Wolf: Fox has run away! I am still hungry 
+//	Wolf: Fox has bitten me!
+//	Fox: Wolf has run away! I am still hungry
+	
 	static class Animal {
 		private final String name;
 
@@ -52,7 +59,8 @@ public class Deadlock {
 			}
 		});
 		
-		Thread thread3 = new Thread(new Runnable() {
+		//Added Code
+/*		Thread thread3 = new Thread(new Runnable() {
 			public void run() {
 				System.exit(0);
 			}
@@ -73,10 +81,18 @@ public class Deadlock {
 	    	 thread3.start();
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
+			}*/
+	     //
 	     
-	     thread1.start();
-	     thread2.start();
+		thread2.start();
+	    try {
+			thread1.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		thread1.start();
+	     
 	     
 	     
 	  }

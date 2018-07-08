@@ -30,9 +30,17 @@ public class SortNumbers {
 		}
 		
 		System.out.println("Sorted without duplicates");
-		Iterator<Integer> itr = removeDuplicates(unsortedNumbers).iterator();
-		while(itr.hasNext()){
-			System.out.println(itr.next());
+		Set<Integer> numSet = removeDuplicates(unsortedNumbers);
+		Iterator<Integer> itr = numSet.iterator();
+		int[] tmp = new int[numSet.size()];
+		for(int c=0; c < tmp.length; c++){
+			if(itr.hasNext()){
+				tmp[c] = itr.next();
+			}			
+		}
+		
+		for(int c=0; c < tmp.length; c++){
+			System.out.println(tmp[c]);			
 		}
 		
 	}
