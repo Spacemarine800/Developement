@@ -1,6 +1,6 @@
 package polymorphism;
 
-public class Horse extends Animal implements Racer {
+public class Horse extends Animal implements Racer, Vegetarian {
 
 	public static void main(String[] args) {
 		Horse hrse = new Horse();
@@ -21,6 +21,16 @@ public class Horse extends Animal implements Racer {
 	@Override
 	public int topSpeed() {
 		return 110;
+	}
+
+	@Override
+	public String plants() {
+		return new String("Grass");
+	}
+
+	@Override
+	public int amount() {
+		return 15;
 	}
 
 }
